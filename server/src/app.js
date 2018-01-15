@@ -9,12 +9,7 @@ app.use(bodyParser.json())
 app.use(cors())
 
 app.get('/posts', (req, res) => {
-    res.send(
-      [{
-        title: "Hi World!",
-        description: "Well, hi there! How are you?"
-      }]
-    )
+    res.get('https://icanhazdadjoke.com/')
   })
   
 
