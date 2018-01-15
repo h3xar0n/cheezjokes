@@ -11,12 +11,12 @@ app.use(cors())
 const https = require('https')
 
 const options = {
-  host: 'https://icanhazdadjoke.com/',
-  method: 'GET',
-  headers: 'Accept: application/json'
+  host: 'icanhazdadjoke.com',
+  headers: 'json/application',
+  method: 'GET'
 };
 
-https.get(options, function(res) {
+const randomJoke = https.get(options, function(res) {
   console.log("Got response: " + res.statusCode);
 }).on('error', function(e) {
   console.log("Got error: " + e.message);
